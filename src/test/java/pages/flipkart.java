@@ -13,9 +13,14 @@ public class flipkart {
 	@FindBy(name = "q")
 	WebElement txt_Searchbox;
 	
-	@FindBy(xpath = "//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[2]/div/div/div/a/div[2]/div[1]/div[1]")
+	@FindBy(xpath = "//div[normalize-space()='Apple iPhone 16 Pro Max (Desert Titanium, 256 GB)']")
 	WebElement lnk_FirstItem;
-
+	
+	@FindBy  (id="twotabsearchtextbox")
+	WebElement txt_AmazonSearchBox;
+	
+	@FindBy(xpath = "//span[normalize-space()='Apple iPhone 16 Pro Max (256 GB) - Desert Titanium']")
+	WebElement lnk_FirstItemAmazon;
 	
 	//Constructor
 	public flipkart(WebDriver driver)
@@ -35,7 +40,16 @@ public class flipkart {
 		lnk_FirstItem.click();
 	}
 	
+	public void searchAmazonProduct(String prodName)
+	{
+		txt_AmazonSearchBox.sendKeys(prodName);
+		txt_AmazonSearchBox.sendKeys(Keys.ENTER);
+	}
 	
+	public void clickFirstItemAmazon() throws Exception {
+		lnk_FirstItemAmazon.click();
+		Thread.sleep(3000);
+	}
 	
 	
 
