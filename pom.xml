@@ -94,18 +94,19 @@
             </plugin>
 
             <!-- Cucumber Maven Plugin for generating reports -->
-            <plugin>
-                <groupId>io.cucumber</groupId>
-                <artifactId>cucumber-maven-plugin</artifactId>
-                <version>4.7.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generateReports</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<plugin>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-maven-plugin</artifactId>
+    <version>5.0.0</version> <!-- Use 5.x versions -->
+    <executions>
+        <execution>
+            <goals>
+                <goal>generateReports</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
 
         </plugins>
     </build>
